@@ -1,0 +1,138 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px;
+  .nav {
+      display: flex;
+      flex-direction: row;
+      a {
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          text-decoration: none;
+          color: black;
+          text-align: center;
+          img {
+              max-width: 32px;
+              height: auto;
+              margin: auto;
+          }
+          span {
+              font-size: 11px;
+          }
+      }
+  }
+}
+  .content {
+      width: 100%;
+      
+      .top {
+          width: inherit;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          
+          h1 {
+              font-family: monsterrat-bold;
+              margin-left: 60px;
+          }
+          
+          .button--add {
+              float: right;
+              color: white;
+              background-color: #F7931E;
+              font-size: 20px;
+              font-weight: 700;
+              border-radius: 50%;
+              border: none;
+              width: 40px;
+              height: 40px;
+              margin-top: 15px;
+              margin-right: 140px;
+
+              text-decoration: none;
+              color: white;
+
+              a {
+                text-decoration: none;
+                color: white;
+              }
+          }
+      }
+      
+      table {
+          margin: auto;
+          font-family: openSans;
+          text-align: left;
+          border-collapse: collapse;
+          
+          thead {
+              font-family: monsterrat-bold;
+          }
+          
+          th {
+              border-bottom: 1px solid #dcdcdc;
+              padding: 25px 50px 25px 0px !important;
+              border-top: 1px solid #dcdcdc;
+          }
+          
+          td {
+              border-bottom: 1px solid #dcdcdc;
+              padding: 25px 50px 25px 0px !important;
+              
+              >span {
+                  padding: 10px 15px;
+                  border-radius: 6px;
+                  color: white;
+                  font-family: openSansBold;
+                  font-weight: 700;
+              }
+              
+              .button {
+                  width: 75px;
+                  height: 44px;
+                  border-radius: 6px;
+                  color: white;
+                  font-family: openSans;
+                  font-size: 16px;
+                  border: none;
+                  &--update { 
+                    background-color: @blue;
+                  }
+
+                  &--start { 
+                    background-color: @orange;
+                  }
+
+                  &--stop {
+                    background-color: @orange;
+                  }
+
+                  &--delete {
+                    background-color: @blue;
+                  }
+
+                  &:last-child {
+                    padding-right: 0px !important;
+                  }
+              }
+          }
+          td[data-status='running'] {
+              >span {
+                  background-color: @green;
+              }
+          }
+          td[data-status='stopped'] {
+              >span {
+                  background-color: grey;
+              }
+          }
+      }
+  }
+
+.button-square {
+  color: white;
+  font-family: monsterrat-bold;
+}
