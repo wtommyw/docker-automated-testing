@@ -1,11 +1,11 @@
 # The name of the repository, appears before the image name
-REPO = 42functions
+REPO = localhost
 
 # Name of the actual image
 NAME = docker-deployer
 
-# The registry where we want to store the image
-REGISTRY = 42f.test:5000
+# The docker registry where we want to store the image
+REGISTRY = localhost:5000
 
 
 ifdef VERSION
